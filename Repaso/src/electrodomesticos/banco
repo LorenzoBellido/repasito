@@ -1,0 +1,74 @@
+Clase CuentaBancaria
+	- numeroCuenta: int
+	# saldo: double
+	- Titular titulares[]
+---------------------------------------
+	+ Constructor sin parámetros
+	+ Constructor(numerocuenta, saldo, titular t)
+---------------------------------------
+	+ getNumeroCuenta()
+	+ getSaldo()
+---------------------------------------
+	- void ingresar(double cantidad)
+	- void retirar(double cantidad)
+	- anadir()
+	- borrar()
+
+
+Clase Titular
+	- dni: String
+	- nombre: String
+	- apellidos: String
+	- telefono: long
+----------------------------------------
+	+ Constructor sin parámetros
+	+ Constructor(dni,nombre,apellidos,telefono)
+----------------------------------------
+	+ getDni()
+	+ getNombre()
+	+ getApellidos()
+	+ getTelefono()
+
+
+
+Clase CuentaAhorro extends CuentaBancaria
+	- cuotaMantenimiento: double
+	- interes: double
+----------------------------------------
+	+ Constructor sin parámetros
+	+ Constructor(super(),cuotaMantenimiento, interes)
+----------------------------------------
+	+ void aplicarInteres()
+	+ void mantenimiento()
+
+
+Clase CuentaCorriente extends CuentaBancaria
+	- porcentajeTransaccion: double
+	- numeroTransacciones: int
+	- Transaccion transacciones[]
+-----------------------------------------
+	+ Constructor sin parámetros
+	+ Constructores(super(), porcentajeTransaccion, numeroTransacciones, Transaccion t)
+-----------------------------------------
+	+ boolean hacerTransaccion(CuentaCorriente c)
+
+Clase Transaccion
+	- dia: int
+	- mes: int
+	- ano: int
+	- concepto: String
+	- importe: double
+-----------------------------------------
+	+ Constructor sin parámetros
+	+ Constructor(dia, mes, ano, concepto, importe)
+-----------------------------------------
+	+ getDia()
+	+ setDia(dia)
+	+ getMes()
+	+ setMes(mes)
+	+ getAno()
+	+ setAno(ano)
+	+ getConcepto()
+	+ setConcepto(concepto)
+	+ getImporte
+	+ setImporte(importe)
