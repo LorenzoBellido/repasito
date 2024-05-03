@@ -24,7 +24,6 @@ public class Main {
 		electrodomesticos[6] = new Electrodomestico(300, "NEGRO", 'd', 50);
 		electrodomesticos[7] = new Electrodomestico(150, 45);
 		electrodomesticos[8] = new Lavadora(200, "feo", 'E', 33, 10);
-		electrodomesticos[9] = new Lavadora(175, 75);
 		
 		for(Electrodomestico elec : electrodomesticos) {
 			electrodomestico++;
@@ -36,14 +35,18 @@ public class Main {
 				television++;
 			}
 		}
-		
+		for(int i = 0; i < electrodomesticos.length; i++) {
+			if(electrodomesticos[i]== null) {
+				electrodomesticos[i] = new Electrodomestico();
+			}
+			
+		}
 		Arrays.sort(electrodomesticos);
-		
 		System.out.println(Arrays.toString(electrodomesticos));
 		
-		System.out.println("Electrodomésticos: " + electrodomestico + "\n"
-							+ "Lavadoras: " + sumaLavadora + "\n"
-							+ "Televisiones: " + television + "\n");
+//		System.out.println("Electrodomésticos: " + electrodomestico + "\n"
+//							+ "Lavadoras: " + sumaLavadora + "\n"
+//							+ "Televisiones: " + television + "\n");
 		
 		
 	}
